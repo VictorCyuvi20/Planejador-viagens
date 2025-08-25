@@ -1,0 +1,121 @@
+/* PAULO E JOAO FIZERAM O CSS COM VARIAVEIS DE CORES E A FORMATAÇÃO DO DOCUMENTO */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --cor-fundo: #f5faff;
+  --cor-primaria: #007bff;
+  --cor-texto: #333;
+  --cor-card: #fff;
+  --cor-hover: #e3f2fd;
+  --cor-destaque: #e1f5fe;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+.rota__header {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.rota__titulo {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.rota__subtitulo {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.rota__container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.rota__form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rota__form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+}
+
+.rota__form input, .rota__form select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.rota__resumo {
+  background: var(--cor-hover);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.rota__botoes {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.rota__botoes button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: var(--cor-primaria);
+  color: white;
+}
+
+.rota__botoes .limpar {
+  background-color: #ccc;
+  color: #333;
+}
+
+.rota__resultados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: var(--cor-card);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+
+.card.destaque {
+  background-color: var(--cor-destaque);
+  font-weight: bold;
+}
+
+.rota__footer {
+  background-color: #ddd;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}

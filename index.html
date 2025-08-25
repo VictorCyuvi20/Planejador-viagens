@@ -1,0 +1,72 @@
+<!-- HTML E MARCAÇÃO FEITAS PELO JOÃO E O PAULO -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planejador de Viagem</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="rota__header">
+    <h1 class="rota__titulo">Planejador de Viagem</h1>
+    <p class="rota__subtitulo">Calcule todos os custos e detalhes da sua próxima viagem</p>
+  </header>
+
+  <main class="rota__container">
+    <section class="rota__form">
+      <h2>Dados da Viagem</h2>
+      <label>Origem:
+        <select id="origemSelect"></select>
+      </label>
+      <label>Destino:
+        <select id="destinoSelect"></select>
+      </label>
+      <div id="resumoRota" class="rota__resumo"></div>
+
+      <h2>Dados do Veículo</h2>
+      <label>Consumo do veículo (km/l):
+        <input type="number" id="consumo" placeholder="Ex: 10" />
+      </label>
+      <label>Preço do combustível (R$/l):
+        <input type="number" id="precoCombustivel" placeholder="Ex: 5.39" />
+      </label>
+      <label>Velocidade média (km/h):
+        <input type="number" id="velocidadeMedia" placeholder="Ex: 100" />
+      </label>
+
+      <div class="rota__botoes">
+        <button id="calcularBtn">Calcular</button>
+        <button id="limparBtn" class="limpar">Limpar</button>
+      </div>
+    </section>
+
+    <section id="resultados" class="rota__resultados hidden">
+      <div class="card">
+        <h3>Combustível</h3>
+        <p id="combustivelInfo"></p>
+      </div>
+      <div class="card">
+        <h3>Tempo de Viagem</h3>
+        <p id="tempoInfo"></p>
+      </div>
+      <div class="card">
+        <h3>Custos Adicionais</h3>
+        <p id="custosInfo"></p>
+      </div>
+      <div class="card destaque">
+        <h3>Custo Total</h3>
+        <p id="totalInfo"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rota__footer">
+    <p>© 2025 Planejador de Viagem</p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
